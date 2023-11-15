@@ -6,5 +6,6 @@
 #Build files
 *.exe
 obj
+bin
 
 Properties
