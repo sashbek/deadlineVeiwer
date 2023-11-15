@@ -1,0 +1,10 @@
+﻿#Visual Studio files
+.vs
+*.sln
+*.csproj
+
+#Build files
+*.exe
+obj
+
+Properties
