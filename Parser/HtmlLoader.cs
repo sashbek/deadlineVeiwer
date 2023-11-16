@@ -30,15 +30,18 @@ namespace deadlineViewer.Parser
 
         public async Task<string> GetSource()
         {
-            strt:
+            while (true)
+            {
                 try
                 {
                     driver.FindElement(By.ClassName("notion-table-view-cell"));
                 }
-                catch (Exception e)
+                catch
                 {
-                    goto strt;
+                    continue;
                 }
+                break;
+            }
 
             string source = driver.FindElement(By.ClassName("notion-html")).GetAttribute("innerHTML");
 
