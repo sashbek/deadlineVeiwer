@@ -53,12 +53,12 @@ namespace deadlineViewer.Parser
 
         private async void Worker()
         {
+            // get html page source from notion using chrome emulator
             var source = await loader.GetSource();
-
+            // parsing this page with anglesharp parser 
             var domParser = new HtmlParser();
-
             var document = await domParser.ParseDocumentAsync(source);
-
+            // parsing parsed doc with sp parser to get table
             var result = parser.Parse(document);
 
             //run action

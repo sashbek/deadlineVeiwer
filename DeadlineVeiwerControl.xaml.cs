@@ -13,7 +13,7 @@ namespace deadlineViewer
     /// Interaction logic for DeadlineVeiwerControl.
     /// </summary>
     /// 
-    class Dead
+    class Deadline
     {
         public string WorkName { get; set; }
         public string Subject { get; set; }
@@ -53,9 +53,6 @@ namespace deadlineViewer
             }   
         }
 
-        private string siteUrl = "https://notxaa.notion.site/notxaa/M3100-d86c5e1baacf4ab8ba2f6b8f1ab9e451";
-        // private string siteUrl = "file:///C:/Users/sasha/Documents/ITMO/DevsTools/deadlineViewer/Resources/page.html";
-
         /// <summary>
         /// Handles click on the button by displaying a message box.
         /// </summary>
@@ -67,17 +64,6 @@ namespace deadlineViewer
         {
             parser.Settings = new NotionSettings();
             parser.Start();
-        }
-
-        public void PrintResults(IEnumerable<IElement> articleLink)
-        {
-            //Every element needs to be cleaned and displayed
-            TextBox t = new TextBox { Height = 200, Width = 300, Text = articleLink.ToString() };
-            main_grid.Children.Add(t);
-        }
-        private void delete_self(object sender, RoutedEventArgs e)
-        {
-            main_grid.Children.Remove((Button)sender);
         }
     }
 }
