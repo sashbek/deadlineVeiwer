@@ -1,7 +1,8 @@
 ﻿#Visual Studio files
-
+.vs
 
 #Build files
+*.vsidx
 *.exe
 obj
 bin

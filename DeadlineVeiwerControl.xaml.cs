@@ -43,7 +43,7 @@ namespace deadlineViewer
         {
             for (int i = 0; i < 64; i += 4)
             {
-                ListItems.Items.Add(new Dead
+                ListItems.Items.Add(new Deadline
                 {
                     WorkName = arg2[i],
                     Subject = arg2[i + 1],
