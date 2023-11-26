@@ -41,7 +41,8 @@ namespace deadlineViewer
 
         private async void Parser_OnNewData(object arg1, string[] arg2)
         {
-            for (int i = 0; i < 64; i += 4)
+            ListItems.Items.Clear();
+            for (int i = 0; i < arg2.Length; i += 4)
             {
                 ListItems.Items.Add(new Deadline
                 {
